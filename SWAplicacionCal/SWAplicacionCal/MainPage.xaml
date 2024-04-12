@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWAplicacionCal.MainPage"
+             Title="Convierte de Centímetros a Pulgadas y Milímetros">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Define los estilos -->
+            <Style TargetType="Entry">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="BackgroundColor" Value="#2196F3"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BorderRadius" Value="30"/>
+                <Setter Property="Padding" Value="10,5"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!-- Contenedor principal -->
+    <Grid>
+        <!-- Margen decorativo con degradado azul -->
+        <BoxView BackgroundColor="#2196F3" VerticalOptions="Start" HeightRequest="60">
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#2196F3" Offset="0"/>
+                    <GradientStop Color="#64B5F6" Offset="1"/>
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+        <!-- Contenido de la página -->
+        <StackLayout VerticalOptions="Start" Margin="0,50,0,0" HorizontalOptions="CenterAndExpand">
+            <Label Text="Convierte de Centímetros a Pulgadas y Milímetros"
+                   HorizontalOptions="Center"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   Margin="10"/>
+
+            <Entry x:Name="txtOperando1" Placeholder="Escribe el número que desees convertir"/>
+            <Button x:Name="Convertir" Text="Convertir" Clicked="Convertir_Clicked"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
+
+
+
+
